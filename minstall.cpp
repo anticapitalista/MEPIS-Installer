@@ -2222,7 +2222,7 @@ void MInstall::copyTime() {
   switch (i) {
     case 1:
       tipsEdit->setText(tr("<p><b>Getting Help</b><br/>"
-        "Basic information about MEPIS Linux is at www.mepis.org.  There are volunteers to help you at mepislovers.org and mepiscommunity.org.</p>"
+        "Basic information about MEPIS Linux is at www.mepis.org.  There are volunteers to help you at mepiscommunity.org.</p>"
         "<p>If you ask for help, please remember to describe your problem and your computer in some detail. Usually statements like 'it didn't work' are not helpful.</p>"));
       break;
 
@@ -2235,7 +2235,7 @@ void MInstall::copyTime() {
     case 11:
       tipsEdit->setText(tr("<p><b>MEPIS and Debian Compatibility</b><br/>"
       "The MEPIS core is compatible with most Debian Stable software packages of the same release cycle. Ubuntu binary packages are almost never compatible with Debian or MEPIS.</p>"
-      "<p>If a package is not available from the recommended MEPIS and Debian package pools, then it may be available in a MEPIS community software repository.  Visit mepislovers.org for more information.</p>"));
+      "<p>If a package is not available from the recommended MEPIS and Debian package pools, then it may be available in a MEPIS community software repository.  Visit forum.mepiscommunity.org for more information.</p>"));
       break;
 
     case 16:
@@ -2254,14 +2254,14 @@ void MInstall::copyTime() {
 
     case 25:
       tipsEdit->setText(tr("<p><b>Communities Make a Difference</b><br/>"
-        "MEPIS Linux stands on the shoulders of the excellent work of Linus, the kernel team, Debian, Mozilla, OpenOffice.org, KDE, other upstream software developers and the people at mepislovers.org and mepiscommunity.org.</p>"
+        "MEPIS Linux stands on the shoulders of the excellent work of Linus, the kernel team, Debian, Mozilla, OpenOffice.org, KDE, other upstream software developers and the people at mepiscommunity.org.</p>"
         "<p>Without their hard work and support, MEPIS Linux would not be possible.</p>"));
       break;
 
     case 29:
       if (!getCmdValue("cat /etc/default/mepis","SERVER","="," ").contains("yes", Qt::CaseInsensitive)) {
       tipsEdit->setText(tr("<p><b>Support MEPIS</b><br/>"
-      "MEPIS is supported by people like you. Some help others at the community sites - mepislovers.org and mepiscommunity.org, or they translate help files into different languages, or make suggestions, write documentation, or help test new software.</p>"
+      "MEPIS is supported by people like you. Some help others at the community site - mepiscommunity.org - or they translate help files into different languages, or make suggestions, write documentation, or help test new software.</p>"
       "<p>If you like MEPIS please go to mepis.org/store and purchase a subscription to help pay for future improvements.</p>"));
       }
       break;
@@ -2304,7 +2304,7 @@ void MInstall::copyTime() {
     case 57:
       tipsEdit->setText(tr("<p><b>Information on the Internet</b><br/>"
       "Much of the Linux information on the Internet is inaccurate or obsolete.  It is not wise to rely on such sources, unless the information comes from a trusted source and pertains to the exact version of Linux you are using.</p>"
-      "<p>When in doubt, ask for advice at mepislovers.org or mepiscommunity.org.</p>"));
+      "<p>When in doubt, ask for advice at forum.mepiscommunity.org.</p>"));
       break;
 
 
