@@ -1417,13 +1417,13 @@ bool MInstall::setComputerName() {
     replaceStringInFile("mepisgrp", computerGroupEdit->text(), "/mnt/mepis/etc/samba/smb.conf");
   }
   if (sambaCheckBox->isChecked()) {
-    system("mv -f /mnt/mepis/etc/rc5.d/K20samba /mnt/mepis/etc/rc5.d/S20samba >/dev/null 2>&1");
-    system("mv -f /mnt/mepis/etc/rc4.d/K20samba /mnt/mepis/etc/rc4.d/S20samba >/dev/null 2>&1");
-    system("mv -f /mnt/mepis/etc/rc3.d/K20samba /mnt/mepis/etc/rc3.d/S20samba >/dev/null 2>&1");
+    system("mv -f /mnt/mepis/etc/rc5.d/K05samba /mnt/mepis/etc/rc5.d/S05samba >/dev/null 2>&1");
+    system("mv -f /mnt/mepis/etc/rc4.d/K05samba /mnt/mepis/etc/rc4.d/S05samba >/dev/null 2>&1");
+    system("mv -f /mnt/mepis/etc/rc3.d/K05samba /mnt/mepis/etc/rc3.d/S05samba >/dev/null 2>&1");
   } else {
-    system("mv -f /mnt/mepis/etc/rc5.d/S20samba /mnt/mepis/etc/rc5.d/K20samba >/dev/null 2>&1");
-    system("mv -f /mnt/mepis/etc/rc4.d/S20samba /mnt/mepis/etc/rc4.d/K20samba >/dev/null 2>&1");
-    system("mv -f /mnt/mepis/etc/rc3.d/S20samba /mnt/mepis/etc/rc3.d/K20samba >/dev/null 2>&1");
+    system("mv -f /mnt/mepis/etc/rc5.d/S05samba /mnt/mepis/etc/rc5.d/K05samba >/dev/null 2>&1");
+    system("mv -f /mnt/mepis/etc/rc4.d/S05samba /mnt/mepis/etc/rc4.d/K05samba >/dev/null 2>&1");
+    system("mv -f /mnt/mepis/etc/rc3.d/S05samba /mnt/mepis/etc/rc3.d/K05samba >/dev/null 2>&1");
   }
 
   replaceStringInFile("mepis1", computerNameEdit->text(), "/mnt/mepis/etc/hosts");
@@ -1501,76 +1501,76 @@ void MInstall::setServices() {
     }
   }
 
-  if (apacheItem != NULL && apacheItem->checkState(0) == Qt::Checked) {
-    system("mv -f /mnt/mepis/etc/rc5.d/K91apache2 /mnt/mepis/etc/rc5.d/S91apache2 >/dev/null 2>&1");
-    system("mv -f /mnt/mepis/etc/rc4.d/K91apache2 /mnt/mepis/etc/rc4.d/S91apache2 >/dev/null 2>&1");
-    system("mv -f /mnt/mepis/etc/rc3.d/K91apache2 /mnt/mepis/etc/rc3.d/S91apache2 >/dev/null 2>&1");
-  } else {
-    system("mv -f /mnt/mepis/etc/rc5.d/S91apache2 /mnt/mepis/etc/rc5.d/K91apache2 >/dev/null 2>&1");
-    system("mv -f /mnt/mepis/etc/rc4.d/S91apache2 /mnt/mepis/etc/rc4.d/K91apache2 >/dev/null 2>&1");
-    system("mv -f /mnt/mepis/etc/rc3.d/S91apache2 /mnt/mepis/etc/rc3.d/K91apache2 >/dev/null 2>&1");
-  }
+  //  if (apacheItem != NULL && apacheItem->checkState(0) == Qt::Checked) {
+//    system("mv -f /mnt/mepis/etc/rc5.d/K91apache2 /mnt/mepis/etc/rc5.d/S91apache2 >/dev/null 2>&1");
+//    system("mv -f /mnt/mepis/etc/rc4.d/K91apache2 /mnt/mepis/etc/rc4.d/S91apache2 >/dev/null 2>&1");
+//    system("mv -f /mnt/mepis/etc/rc3.d/K91apache2 /mnt/mepis/etc/rc3.d/S91apache2 >/dev/null 2>&1");
+//  } else {
+//    system("mv -f /mnt/mepis/etc/rc5.d/S91apache2 /mnt/mepis/etc/rc5.d/K91apache2 >/dev/null 2>&1");
+//    system("mv -f /mnt/mepis/etc/rc4.d/S91apache2 /mnt/mepis/etc/rc4.d/K91apache2 >/dev/null 2>&1");
+//    system("mv -f /mnt/mepis/etc/rc3.d/S91apache2 /mnt/mepis/etc/rc3.d/K91apache2 >/dev/null 2>&1");
+//  }
   
-  if (mysqlItem != NULL && mysqlItem->checkState(0) == Qt::Checked) {
-    system("mv -f /mnt/mepis/etc/rc5.d/K20mysql /mnt/mepis/etc/rc5.d/S20mysql >/dev/null 2>&1");
-    system("mv -f /mnt/mepis/etc/rc4.d/K20mysql /mnt/mepis/etc/rc4.d/S20mysql >/dev/null 2>&1");
-    system("mv -f /mnt/mepis/etc/rc3.d/K20mysql /mnt/mepis/etc/rc3.d/S20mysql >/dev/null 2>&1");
-  } else {
-    system("mv -f /mnt/mepis/etc/rc5.d/S20mysql /mnt/mepis/etc/rc5.d/K20mysql >/dev/null 2>&1");
-    system("mv -f /mnt/mepis/etc/rc4.d/S20mysql /mnt/mepis/etc/rc4.d/K20mysql >/dev/null 2>&1");
-    system("mv -f /mnt/mepis/etc/rc3.d/S20mysql /mnt/mepis/etc/rc3.d/K20mysql >/dev/null 2>&1");
-  }
+//  if (mysqlItem != NULL && mysqlItem->checkState(0) == Qt::Checked) {
+//    system("mv -f /mnt/mepis/etc/rc5.d/K20mysql /mnt/mepis/etc/rc5.d/S20mysql >/dev/null 2>&1");
+//    system("mv -f /mnt/mepis/etc/rc4.d/K20mysql /mnt/mepis/etc/rc4.d/S20mysql >/dev/null 2>&1");
+//    system("mv -f /mnt/mepis/etc/rc3.d/K20mysql /mnt/mepis/etc/rc3.d/S20mysql >/dev/null 2>&1");
+//  } else {
+//    system("mv -f /mnt/mepis/etc/rc5.d/S20mysql /mnt/mepis/etc/rc5.d/K20mysql >/dev/null 2>&1");
+//    system("mv -f /mnt/mepis/etc/rc4.d/S20mysql /mnt/mepis/etc/rc4.d/K20mysql >/dev/null 2>&1");
+//    system("mv -f /mnt/mepis/etc/rc3.d/S20mysql /mnt/mepis/etc/rc3.d/K20mysql >/dev/null 2>&1");
+//  }
     
-  if (pppItem != NULL && pppItem->checkState(0) == Qt::Checked) {
-    system("mv -f /mnt/mepis/etc/rc5.d/K14ppp /mnt/mepis/etc/rc5.d/S14ppp >/dev/null 2>&1");
-    system("mv -f /mnt/mepis/etc/rc4.d/K14ppp /mnt/mepis/etc/rc4.d/S14ppp >/dev/null 2>&1");
-    system("mv -f /mnt/mepis/etc/rc3.d/K14ppp /mnt/mepis/etc/rc3.d/S14ppp >/dev/null 2>&1");
-  } else {
-    system("mv -f /mnt/mepis/etc/rc5.d/S14ppp /mnt/mepis/etc/rc5.d/K14ppp >/dev/null 2>&1");
-    system("mv -f /mnt/mepis/etc/rc4.d/S14ppp /mnt/mepis/etc/rc4.d/K14ppp >/dev/null 2>&1");
-    system("mv -f /mnt/mepis/etc/rc3.d/S14ppp /mnt/mepis/etc/rc3.d/K14ppp >/dev/null 2>&1");
-  }
-/*  if (isdnItem->isOn()) {
-    system("mv -f /mnt/mepis/etc/rc5.d/K13capiutils /mnt/mepis/etc/rc5.d/S13capiutils >/dev/null 2>&1");
-    system("mv -f /mnt/mepis/etc/rc4.d/K13capiutils /mnt/mepis/etc/rc4.d/S13capiutils >/dev/null 2>&1");
-    system("mv -f /mnt/mepis/etc/rc3.d/K13capiutils /mnt/mepis/etc/rc3.d/S13capiutils >/dev/null 2>&1");
-    system("mv -f /mnt/mepis/etc/rc5.d/K13isdnactivecards /mnt/mepis/etc/rc5.d/S13isdnactivecards >/dev/null 2>&1");
-    system("mv -f /mnt/mepis/etc/rc4.d/K13isdnactivecards /mnt/mepis/etc/rc4.d/S13isdnactivecards >/dev/null 2>&1");
-    system("mv -f /mnt/mepis/etc/rc3.d/K13isdnactivecards /mnt/mepis/etc/rc3.d/S13isdnactivecards >/dev/null 2>&1");
-    system("mv -f /mnt/mepis/etc/rc5.d/K20isdnutils /mnt/mepis/etc/rc5.d/S20isdnutils >/dev/null 2>&1");
-    system("mv -f /mnt/mepis/etc/rc4.d/K20isdnutils /mnt/mepis/etc/rc4.d/S20isdnutils >/dev/null 2>&1");
-    system("mv -f /mnt/mepis/etc/rc3.d/K20isdnutils /mnt/mepis/etc/rc3.d/S20isdnutils >/dev/null 2>&1");
-  } else {
-    system("mv -f /mnt/mepis/etc/rc5.d/S13capiutils /mnt/mepis/etc/rc5.d/K13capiutils >/dev/null 2>&1");
-    system("mv -f /mnt/mepis/etc/rc4.d/S13capiutils /mnt/mepis/etc/rc4.d/K13capiutils >/dev/null 2>&1");
-    system("mv -f /mnt/mepis/etc/rc3.d/S13capiutils /mnt/mepis/etc/rc3.d/K13capiutils >/dev/null 2>&1");
-    system("mv -f /mnt/mepis/etc/rc5.d/S13isdnactivecards /mnt/mepis/etc/rc5.d/K13isdnactivecards >/dev/null 2>&1");
-    system("mv -f /mnt/mepis/etc/rc4.d/S13isdnactivecards /mnt/mepis/etc/rc4.d/K13isdnactivecards >/dev/null 2>&1");
-    system("mv -f /mnt/mepis/etc/rc3.d/S13isdnactivecards /mnt/mepis/etc/rc3.d/K13isdnactivecards >/dev/null 2>&1");
-    system("mv -f /mnt/mepis/etc/rc5.d/S20isdnutils /mnt/mepis/etc/rc5.d/K20isdnutils >/dev/null 2>&1");
-    system("mv -f /mnt/mepis/etc/rc4.d/S20isdnutils /mnt/mepis/etc/rc4.d/K20isdnutils >/dev/null 2>&1");
-    system("mv -f /mnt/mepis/etc/rc3.d/S20isdnutils /mnt/mepis/etc/rc3.d/K20isdnutils >/dev/null 2>&1");
-    // remove gui utilities from menus
-    system("rm -f /mnt/mepis/etc/menu/isdn*");
-    system("rm -f /mnt/mepis/usr/share/applnk/Internet/isdn-config.desktop");
-  }*/
+//  if (pppItem != NULL && pppItem->checkState(0) == Qt::Checked) {
+//   system("mv -f /mnt/mepis/etc/rc5.d/K14ppp /mnt/mepis/etc/rc5.d/S14ppp >/dev/null 2>&1");
+//    system("mv -f /mnt/mepis/etc/rc4.d/K14ppp /mnt/mepis/etc/rc4.d/S14ppp >/dev/null 2>&1");
+//    system("mv -f /mnt/mepis/etc/rc3.d/K14ppp /mnt/mepis/etc/rc3.d/S14ppp >/dev/null 2>&1");
+//  } else {
+//    system("mv -f /mnt/mepis/etc/rc5.d/S14ppp /mnt/mepis/etc/rc5.d/K14ppp >/dev/null 2>&1");
+//    system("mv -f /mnt/mepis/etc/rc4.d/S14ppp /mnt/mepis/etc/rc4.d/K14ppp >/dev/null 2>&1");
+//    system("mv -f /mnt/mepis/etc/rc3.d/S14ppp /mnt/mepis/etc/rc3.d/K14ppp >/dev/null 2>&1");
+//  }
+//*  if (isdnItem->isOn()) {
+//    system("mv -f /mnt/mepis/etc/rc5.d/K13capiutils /mnt/mepis/etc/rc5.d/S13capiutils >/dev/null 2>&1");
+//    system("mv -f /mnt/mepis/etc/rc4.d/K13capiutils /mnt/mepis/etc/rc4.d/S13capiutils >/dev/null 2>&1");
+//    system("mv -f /mnt/mepis/etc/rc3.d/K13capiutils /mnt/mepis/etc/rc3.d/S13capiutils >/dev/null 2>&1");
+//    system("mv -f /mnt/mepis/etc/rc5.d/K13isdnactivecards /mnt/mepis/etc/rc5.d/S13isdnactivecards >/dev/null 2>&1");
+//    system("mv -f /mnt/mepis/etc/rc4.d/K13isdnactivecards /mnt/mepis/etc/rc4.d/S13isdnactivecards >/dev/null 2>&1");
+//    system("mv -f /mnt/mepis/etc/rc3.d/K13isdnactivecards /mnt/mepis/etc/rc3.d/S13isdnactivecards >/dev/null 2>&1");
+//    system("mv -f /mnt/mepis/etc/rc5.d/K20isdnutils /mnt/mepis/etc/rc5.d/S20isdnutils >/dev/null 2>&1");
+//    system("mv -f /mnt/mepis/etc/rc4.d/K20isdnutils /mnt/mepis/etc/rc4.d/S20isdnutils >/dev/null 2>&1");
+//   system("mv -f /mnt/mepis/etc/rc3.d/K20isdnutils /mnt/mepis/etc/rc3.d/S20isdnutils >/dev/null 2>&1");
+//  } else {
+//    system("mv -f /mnt/mepis/etc/rc5.d/S13capiutils /mnt/mepis/etc/rc5.d/K13capiutils >/dev/null 2>&1");
+//    system("mv -f /mnt/mepis/etc/rc4.d/S13capiutils /mnt/mepis/etc/rc4.d/K13capiutils >/dev/null 2>&1");
+//    system("mv -f /mnt/mepis/etc/rc3.d/S13capiutils /mnt/mepis/etc/rc3.d/K13capiutils >/dev/null 2>&1");
+//    system("mv -f /mnt/mepis/etc/rc5.d/S13isdnactivecards /mnt/mepis/etc/rc5.d/K13isdnactivecards >/dev/null 2>&1");
+//    system("mv -f /mnt/mepis/etc/rc4.d/S13isdnactivecards /mnt/mepis/etc/rc4.d/K13isdnactivecards >/dev/null 2>&1");
+//    system("mv -f /mnt/mepis/etc/rc3.d/S13isdnactivecards /mnt/mepis/etc/rc3.d/K13isdnactivecards >/dev/null 2>&1");
+//    system("mv -f /mnt/mepis/etc/rc5.d/S20isdnutils /mnt/mepis/etc/rc5.d/K20isdnutils >/dev/null 2>&1");
+//    system("mv -f /mnt/mepis/etc/rc4.d/S20isdnutils /mnt/mepis/etc/rc4.d/K20isdnutils >/dev/null 2>&1");
+//    system("mv -f /mnt/mepis/etc/rc3.d/S20isdnutils /mnt/mepis/etc/rc3.d/K20isdnutils >/dev/null 2>&1");
+//    // remove gui utilities from menus
+//    system("rm -f /mnt/mepis/etc/menu/isdn*");
+//    system("rm -f /mnt/mepis/usr/share/applnk/Internet/isdn-config.desktop");
+//  }*/
   if (bluezItem != NULL && bluezItem->checkState(0) == Qt::Checked) {
-    system("mv -f /mnt/mepis/etc/rc5.d/K25bluez-utils /mnt/mepis/etc/rc5.d/S25bluez-utils >/dev/null 2>&1");
-    system("mv -f /mnt/mepis/etc/rc4.d/K25bluez-utils /mnt/mepis/etc/rc4.d/S25bluez-utils >/dev/null 2>&1");
-    system("mv -f /mnt/mepis/etc/rc3.d/K25bluez-utils /mnt/mepis/etc/rc3.d/S25bluez-utils >/dev/null 2>&1");
+    system("mv -f /mnt/mepis/etc/rc5.d/K03bluetooth /mnt/mepis/etc/rc5.d/S03bluetooth >/dev/null 2>&1");
+    system("mv -f /mnt/mepis/etc/rc4.d/K03bluetooth /mnt/mepis/etc/rc4.d/S03bluetooth >/dev/null 2>&1");
+    system("mv -f /mnt/mepis/etc/rc3.d/K03bluetooth /mnt/mepis/etc/rc3.d/S03bluetooth >/dev/null 2>&1");
   } else {
-    system("mv -f /mnt/mepis/etc/rc5.d/S25bluez-utils /mnt/mepis/etc/rc5.d/K25bluez-utils >/dev/null 2>&1");
-    system("mv -f /mnt/mepis/etc/rc4.d/S25bluez-utils /mnt/mepis/etc/rc4.d/K25bluez-utils >/dev/null 2>&1");
-    system("mv -f /mnt/mepis/etc/rc3.d/S25bluez-utils /mnt/mepis/etc/rc3.d/K25bluez-utils >/dev/null 2>&1");
+    system("mv -f /mnt/mepis/etc/rc5.d/S03bluetooth /mnt/mepis/etc/rc5.d/K03bluetooth >/dev/null 2>&1");
+    system("mv -f /mnt/mepis/etc/rc4.d/S03bluetooth /mnt/mepis/etc/rc4.d/K03bluetooth >/dev/null 2>&1");
+    system("mv -f /mnt/mepis/etc/rc3.d/S03bluetooth /mnt/mepis/etc/rc3.d/K03bluetooth >/dev/null 2>&1");
   }
   if (cupsysItem != NULL && cupsysItem->checkState(0) == Qt::Checked) {
-    system("mv -f /mnt/mepis/etc/rc5.d/K19cupsys /mnt/mepis/etc/rc5.d/S19cupsys >/dev/null 2>&1");
-    system("mv -f /mnt/mepis/etc/rc4.d/K19cupsys /mnt/mepis/etc/rc4.d/S19cupsys >/dev/null 2>&1");
-    system("mv -f /mnt/mepis/etc/rc3.d/K19cupsys /mnt/mepis/etc/rc3.d/S19cupsys >/dev/null 2>&1");
+    system("mv -f /mnt/mepis/etc/rc5.d/K04cups /mnt/mepis/etc/rc5.d/S04cups >/dev/null 2>&1");
+    system("mv -f /mnt/mepis/etc/rc4.d/K04cups /mnt/mepis/etc/rc4.d/S04cups >/dev/null 2>&1");
+    system("mv -f /mnt/mepis/etc/rc3.d/K04cups /mnt/mepis/etc/rc3.d/S04cups >/dev/null 2>&1");
   } else {
-    system("mv -f /mnt/mepis/etc/rc5.d/S19cupsys /mnt/mepis/etc/rc5.d/K19cupsys >/dev/null 2>&1");
-    system("mv -f /mnt/mepis/etc/rc4.d/S19cupsys /mnt/mepis/etc/rc4.d/K19cupsys >/dev/null 2>&1");
-    system("mv -f /mnt/mepis/etc/rc3.d/S19cupsys /mnt/mepis/etc/rc3.d/K19cupsys >/dev/null 2>&1");
+    system("mv -f /mnt/mepis/etc/rc5.d/S04cups /mnt/mepis/etc/rc5.d/K04cups >/dev/null 2>&1");
+    system("mv -f /mnt/mepis/etc/rc4.d/S04cups /mnt/mepis/etc/rc4.d/K04cups >/dev/null 2>&1");
+    system("mv -f /mnt/mepis/etc/rc3.d/S04cups /mnt/mepis/etc/rc3.d/K04cups >/dev/null 2>&1");
   } 
 
   setCursor(QCursor(Qt::ArrowCursor));
